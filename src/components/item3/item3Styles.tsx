@@ -1,5 +1,17 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {}
+  container: {
+    width: 200,
+    height: 300,
+    backgroundColor: 'red'
+  },
+  text:{
+    color: 'white',
+    fontWeight: 'bold',
+    alignSelf: 'center'
+  },
+  image:{
+    alignSelf: 'center'
+  }
 });

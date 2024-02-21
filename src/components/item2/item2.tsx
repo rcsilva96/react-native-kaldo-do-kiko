@@ -1,12 +1,38 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, Pressable } from 'react-native';
 
 import { styles } from './item2Styles';
 
-export function item2() {
-  return (
-    <View style={styles.container}>
+import venda1 from '../../services/vendaService'
 
-    </View>
+export function Item2({ onVenda }: { onVenda: (quantidade: number, valorVenda: number) => void }) {
+  const [quantidadeVendaItem1, setQuantidadeVendaItem1] = useState(0);
+  const precoUnitario = 2.50;
+
+  const handlePress = () => {
+    setQuantidadeVendaItem1((prevQuantidade) => prevQuantidade + 1);
+    onVenda(2.5, precoUnitario); // Notificar a página sobre a venda
+    venda1(); // Chamar o serviço aqui se necessário
+  };
+
+  return (
+    <Pressable
+      onPress={handlePress}>
+
+      <View style={styles.container}>
+
+        <Image 
+          source={require('../../../assets/neko.png')}
+          style={styles.image} 
+        />
+
+          <Text style={styles.text}>Teste 2</Text>
+          <Text style={styles.text}>R$ 2,50</Text>
+
+          <Text style={styles.text}>Vendidos: {quantidadeVendaItem1}</Text>
+
+      </View>
+
+    </Pressable>
   );
 }
