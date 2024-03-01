@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
     height: 300,
     backgroundColor: 'blue',
   },
+  containerPressed: {
+    backgroundColor: 'grey',
+  },
   text:{
     color: 'white',
     fontWeight: 'bold',

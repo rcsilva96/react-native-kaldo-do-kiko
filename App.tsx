@@ -1,15 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
+import { Routes } from './src/routes';
 import { StyleSheet, Text, View } from 'react-native';
-
-import { PaginaVendas } from './src/screens/paginaVendas/paginaVendas';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-
-      <PaginaVendas />
-
-    </View>
+    <Routes />
   );
 }
 

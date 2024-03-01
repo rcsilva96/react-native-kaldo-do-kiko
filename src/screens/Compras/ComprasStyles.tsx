@@ -7,12 +7,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  displayRow:{
-    flexDirection: 'row',
-  },
-  texto: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    alignSelf: 'center'
+  titulo: {
+    fontSize: 36,
   }
 });

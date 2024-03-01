@@ -10,7 +10,7 @@ import { Item2 } from '../../components/item2/item2';
 import { Item3 } from '../../components/item3/item3';
 import { Item4 } from '../../components/item4/item4';
 
-export function PaginaVendas() {
+export function PaginaVendas({navigation}: any) {
 
   const [totalVendas, setTotalVendas] = useState(0);
 
@@ -26,7 +26,10 @@ export function PaginaVendas() {
 
       <View style={styles.displayRow}>
 
-        <Item1 onVenda={handleVenda}/>
+
+          <Item1 onVenda={handleVenda}/>
+
+
         <Item2 onVenda={handleVenda}/>
 
       </View>

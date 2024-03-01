@@ -6,6 +6,7 @@ import { styles } from './item1Styles';
 import venda1 from '../../services/vendaService'
 
 export function Item1({ onVenda }: { onVenda: (quantidade: number, valorVenda: number) => void }) {
+
   const [quantidadeVendaItem1, setQuantidadeVendaItem1] = useState(0);
   const precoUnitario = 3.00;
 
